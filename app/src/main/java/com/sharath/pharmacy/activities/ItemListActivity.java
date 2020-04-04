@@ -1,10 +1,12 @@
-package com.sharath.pharmacy;
+package com.sharath.pharmacy.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.sharath.pharmacy.R;
+
+public class ItemListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
