@@ -5,14 +5,21 @@ import android.content.Context;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.IOException;
+import java.net.SocketTimeoutException;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiAdapter {
 
+    //Todo: remove base url when you push code
     private static final String BASE_URL = "";
 
     private static Retrofit retrofit = null;
@@ -41,7 +48,13 @@ public class ApiAdapter {
                 .writeTimeout(1, TimeUnit.MINUTES)
                 .readTimeout(1, TimeUnit.MINUTES);
 
+        //TODO: remove the following logging code
+
+
         okHttpClient = builder.build();
         return okHttpClient;
     }
+
+    //TODO: remove following method
+
 }
