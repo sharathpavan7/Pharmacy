@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Pharmacy</string>
+    <string name="txt_price_heading">Price</string>
+    <string name="txt_qty_heading">Qty</string>
+    <string name="txt_pac_heading">Pac</string>
+    <string name="btn_add_cart">ADD TO CART</string>
 </resources>
