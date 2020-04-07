@@ -22,15 +22,18 @@ public class ItemDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_details);
 
-        getItemsDetails();
+        getItemsDetails("");
     }
 
-    private void getItemsDetails() {
+    private void getItemsDetails(String itemId) {
 
         ApiService apiService = ApiAdapter.getClient
                 (this).create(ApiService.class);
 
-        Call<ItemDetailsApiResponse> serverCom = apiService.fetchItemDetails("I00131");
+        String item = String.format("UAT05E~143452~%s~", /*"I00131"*/itemId);
+
+        Call<ItemDetailsApiResponse> serverCom = apiService.fetchItemDetails("GETITEMDETAILSNEWV1",
+                item);
 
         serverCom.enqueue(new Callback<ItemDetailsApiResponse>() {
 

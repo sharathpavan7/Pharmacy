@@ -15,7 +15,9 @@ public interface ApiService {
     Call<ItemsListApiResponse> fetchItems();
 
     //Todo: remove end point when you push code
-    @GET("?idx=GETITEMDETAILSNEWV1&data=UAT05E~143452~I00131~")
-    Call<ItemDetailsApiResponse> fetchItemDetails(@Query("itemId") String itemId);
+    //@GET("?idx=GETITEMDETAILSNEWV1&data=UAT05E~143452~I00131~")
+    @GET("api2/")
+    Call<ItemDetailsApiResponse> fetchItemDetails(@Query("idx") String querry1,
+                                                  @Query("data") String querry2 );
 
 }

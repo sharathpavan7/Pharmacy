@@ -20,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiAdapter {
 
     //Todo: remove base url when you push code
-    private static final String BASE_URL = "http://www.orderbuk.com/commandcenter/backend/web/api2/";
+    private static final String BASE_URL = "http://www.orderbuk.com/commandcenter/backend/web/";
 
     private static Retrofit retrofit = null;
     private static volatile OkHttpClient okHttpClient;
