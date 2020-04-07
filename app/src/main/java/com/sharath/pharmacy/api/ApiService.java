@@ -11,11 +11,11 @@ import retrofit2.http.Query;
 public interface ApiService {
 
     //Todo: remove end point when you push code
-    @GET("")
+    @GET("?idx=GETCATEGORYITEMLISTRATEASCRXV1&data=UAT05E~0001~143452~")
     Call<ItemsListApiResponse> fetchItems();
 
     //Todo: remove end point when you push code
-    @GET("")
+    @GET("?idx=GETITEMDETAILSNEWV1&data=UAT05E~143452~I00131~")
     Call<ItemDetailsApiResponse> fetchItemDetails(@Query("itemId") String itemId);
 
 }
