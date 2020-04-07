@@ -11,7 +11,7 @@ import retrofit2.http.Query;
 public interface ApiService {
 
     //Todo: remove end point when you push code
-    @GET("?idx=GETCATEGORYITEMLISTRATEASCRXV1&data=UAT05E~0001~143452~")
+    @GET("api2/?idx=GETCATEGORYITEMLISTRATEASCRXV1&data=UAT05E~0001~143452~")
     Call<ItemsListApiResponse> fetchItems();
 
     //Todo: remove end point when you push code
