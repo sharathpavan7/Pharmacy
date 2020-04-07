@@ -2,6 +2,8 @@ package com.sharath.pharmacy.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -24,10 +26,14 @@ import retrofit2.Response;
 
 public class ItemListActivity extends AppCompatActivity {
 
+    private RecyclerView rcyItemList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        rcyItemList = findViewById(R.id.rcy_item_list);
 
         getItemsList();
     }
@@ -53,6 +59,10 @@ public class ItemListActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void setAdapter(List<Item> items) {
+        //rcyItemList.setLayoutManager(new LinearLayoutManager());
     }
 
     private void saveItemsInDB(final ArrayList<Item> items) {

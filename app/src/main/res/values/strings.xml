@@ -4,4 +4,5 @@
     <string name="txt_qty_heading">Qty</string>
     <string name="txt_pac_heading">Pac</string>
     <string name="btn_add_cart">ADD TO CART</string>
+    <string name="item_pic">itemPic</string>
 </resources>
