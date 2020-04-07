@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 ext {
     retrofitLib = '2.5.0'
+    roomLib = '2.2.3'
 }
 
 android {
@@ -36,7 +37,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitLib"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitLib"
     debugImplementation "com.squareup.okhttp3:logging-interceptor:3.5.0"
+
+    //Room
+    implementation "androidx.room:room-runtime:${roomLib}"
+    annotationProcessor "androidx.room:room-compiler:${roomLib}"
 }
